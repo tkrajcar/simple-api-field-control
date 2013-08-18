@@ -14,4 +14,5 @@ group :development do
   gem "jeweler", "~> 1.8.7"
   gem "simplecov", ">= 0"
   gem "sqlite3"
+  gem "json_spec", "~> 1.1.1"
 end

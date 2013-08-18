@@ -1,6 +1,7 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'rspec'
+require 'json_spec'
 require 'simple-api-field-control'
 require 'simplecov'
 require 'active_record'
@@ -12,7 +13,7 @@ SimpleCov.start if ENV["COVERAGE"]
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
-  
+  config.include JsonSpec::Helpers
 end
 
 ActiveRecord::Base.establish_connection(
