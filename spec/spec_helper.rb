@@ -3,6 +3,8 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'rspec'
 require 'simple-api-field-control'
 require 'simplecov'
+require 'active_record'
+require 'Post'
 SimpleCov.start if ENV["COVERAGE"]
 
 # Requires supporting files with custom matchers and macros, etc,
@@ -11,4 +13,16 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
   
+end
+
+ActiveRecord::Base.establish_connection(
+  :adapter => 'sqlite3',
+  :database => ':memory:'
+)
+
+ActiveRecord::Schema.define do
+  self.verbose = false
+  create_table :posts, :force => true do |t|
+    t.string :subject
+  end
 end
