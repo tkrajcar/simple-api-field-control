@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = "simple-api-field-control"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tim Krajcar"]
   s.date = "2013-08-19"
-  s.description = "Ever needed to simply include a few calculated fields/virtual attributes/custom methods in your serialization? This gem makes it simple and supports both JSON and XML rendering."
+  s.description = "A simple DSL for ActiveRecord objects to include/exclude virtual attributes/custom methods in to_json/to_xml."
   s.email = "allegro@conmolto.org"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".rspec",
+    ".travis.yml",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
@@ -26,6 +27,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/simple-api-field-control.rb",
+    "simple-api-field-control.gemspec",
     "spec/Post.rb",
     "spec/active-record-setup.rb",
     "spec/simple-api-field-control_spec.rb",
@@ -35,7 +37,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.3"
-  s.summary = "Simple DSL for ActiveRecord objects to include virtual attributes/custom methods in to_json/to_xml."
+  s.summary = "A simple DSL for ActiveRecord objects to include/exclude virtual attributes/custom methods in to_json/to_xml."
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
