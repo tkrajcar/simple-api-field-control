@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "simple-api-field-control"
   gem.homepage = "http://github.com/tkrajcar/simple-api-field-control"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Simple DSL to include additional virtual attributes in to_json/to_xml."
+  gem.description = "Ever needed to simply include a few calculated fields/virtual attributes/custom methods in your serialization? This gem makes it simple and supports both JSON and XML rendering."
   gem.email = "allegro@conmolto.org"
   gem.authors = ["Tim Krajcar"]
   # dependencies defined in Gemfile
