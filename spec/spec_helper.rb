@@ -6,7 +6,8 @@ require 'nokogiri'
 require 'simple-api-field-control'
 require 'simplecov'
 require 'active_record'
-require 'Post'
+require 'active-record-setup'
+
 SimpleCov.start if ENV["COVERAGE"]
 
 # Requires supporting files with custom matchers and macros, etc,
@@ -15,16 +16,4 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
   config.include JsonSpec::Helpers
-end
-
-ActiveRecord::Base.establish_connection(
-  :adapter => 'sqlite3',
-  :database => ':memory:'
-)
-
-ActiveRecord::Schema.define do
-  self.verbose = false
-  create_table :posts, :force => true do |t|
-    t.string :subject
-  end
 end
