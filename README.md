@@ -1,5 +1,8 @@
 # simple-api-field-control
 
+[![Gem Version](https://badge.fury.io/rb/simple-api-field-control.png)](http://badge.fury.io/rb/simple-api-field-control)
+[![Build Status](https://travis-ci.org/tkrajcar/simple-api-field-control.png?branch=master)](https://travis-ci.org/tkrajcar/simple-api-field-control)
+
 Ever needed to simply include a few calculated fields/virtual attributes/custom methods in your serialization? This gem makes it simple and supports both JSON and XML rendering.
 
 ## Usage
