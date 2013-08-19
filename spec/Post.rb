@@ -1,4 +1,9 @@
 class Post < ActiveRecord::Base
+  include SimpleAPIFieldControl
+
+  api_include :subject_length
+  api_include :subject_words
+
   def subject_length
     self.subject.length
   end
