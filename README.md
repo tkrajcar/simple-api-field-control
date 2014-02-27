@@ -3,9 +3,13 @@
 [![Gem Version](https://badge.fury.io/rb/simple-api-field-control.png)](http://badge.fury.io/rb/simple-api-field-control)
 [![Build Status](https://travis-ci.org/tkrajcar/simple-api-field-control.png?branch=master)](https://travis-ci.org/tkrajcar/simple-api-field-control)
 
-Ever needed to simply include or exclude a few calculated fields/virtual attributes/custom methods in your serialization? This gem makes it simple and supports both JSON and XML rendering.
+## EOL Notice
+
+**Since getting familiar with [active_model_serializers](https://github.com/rails-api/active_model_serializers), I now consider that gem to be vastly superior to this implementation. I'm keeping this around since it might be interesting to somebody, but have no intention of doing further work on it.**
 
 ## Usage
+
+Ever needed to simply include or exclude a few calculated fields/virtual attributes/custom methods in your serialization? This gem makes it simple and supports both JSON and XML rendering.
 
 1. Include `gem "simple-api-field-control"` in your Gemfile.
 2. In your model class where you want to use this module, add `include SimpleAPIFieldControl`.
@@ -57,18 +61,8 @@ puts p.to_xml
 </post>
 ```
 
-## Contributing to simple-api-field-control
-
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
-
 ## Copyright
 
-Copyright (c) 2013 Tim Krajcar. See LICENSE.txt for
+Copyright (c) 2014 Tim Krajcar. See LICENSE.txt for
 further details.
 
